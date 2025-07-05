@@ -86,5 +86,5 @@ You’ve chosen: <b>{character['Name']}</b>
         chat_id=query.message.chat.id,
         photo=character["Pic"],
         caption=desc,
-        parse_mode="html"
+        parse_mode=None
     )
