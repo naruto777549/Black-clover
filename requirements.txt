@@ -1,3 +1,4 @@
 kurigram 
 tgcrypto
-motor  # for MongoDB
+motor
+pymongo 
