@@ -1,10 +1,14 @@
 from Black import bot
 from pyrogram import idle
-from Black.Modules import start
-from Black.Modules import reset
+
+# Import all command handlers
+from Black.Modules import start, reset
+
+print("🚀 Starting the bot...")
 
 if __name__ == "__main__":
     bot.start()
-    print("✅ BlackGameBot is online.")
+    print("✅ Bot is running...")
     idle()
+    print("⛔ Bot stopped.")
     bot.stop()
