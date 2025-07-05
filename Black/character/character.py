@@ -17,7 +17,7 @@ Asta = {
     'Element': 'Anti-Magic',
     'Special Trait': 'Nullify all magic-type effects',
     'Rarity': 'Legendary',
-    'Pic': 'asta_image_url',
+    'Pic': 'https://files.catbox.moe/rl43ye.jpg',
     'Description': "Asta uses anti-magic to overcome all odds. Wielding massive swords and unbreakable resolve, he's a relentless fighter from the Black Bulls."
 }
 
@@ -40,7 +40,7 @@ Magna = {
     'Element': 'Fire',
     'Special Trait': 'Chains enemy’s HP to his own in 1v1',
     'Rarity': 'Epic',
-    'Pic': 'magna_image_url',
+    'Pic': 'https://files.catbox.moe/a4r256.jpg',
     'Description': "Magna fights with explosive fire magic and fearless grit. His new Soul Chain technique makes him a dangerous duelist."
 }
 
@@ -63,6 +63,6 @@ Luck = {
     'Element': 'Lightning',
     'Special Trait': 'Speed increases with each turn',
     'Rarity': 'Epic',
-    'Pic': 'luck_image_url',
+    'Pic': 'https://files.catbox.moe/x6cbgl.jpg',
     'Description': "Luck is a battle maniac who loves fighting strong enemies. His lightning magic grants him insane speed and agility in combat."
 }
