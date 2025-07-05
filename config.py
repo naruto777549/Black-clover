@@ -1,7 +1,7 @@
 import os
 
-API_ID = 123456  # Your actual API ID
-API_HASH = "your_api_hash_here"
-BOT_TOKEN = "your_bot_token_here"
-MONGO_URL = "your_mongodb_connection_url"
-ADMINS = [123456789]  # Your Telegram user ID (as list)
+API_ID = 21218274  
+API_HASH = "3474a18b61897c672d315fb330edb213"
+BOT_TOKEN = "7207574948:AAGRV7Te9gcinmy9hLnPvAOiEzcOYgllDns"
+MONGO_URL = "mongodb+srv://sufyan532011:5042@auctionbot.5ms20.mongodb.net/?retryWrites=true&w=majority&appName=AuctionBot"
+ADMINS = [7576729648]  # Your Telegram user ID (as list)
