@@ -39,7 +39,7 @@ async def private_start(_, message: Message):
     ])
     
     await message.reply_photo(
-        photo="https://i.imgur.com/4M34hi2.jpeg",  # replace with your welcome image
+        photo="https://files.catbox.moe/4sdthu.jpg",  # replace with your welcome image
         caption="👋 Welcome to the world of Magic Knights!\n\nChoose your starting character to begin your journey:",
         reply_markup=buttons
     )
