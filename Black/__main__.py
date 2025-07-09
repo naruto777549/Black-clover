@@ -2,7 +2,7 @@ from Black import bot
 from pyrogram import idle
 
 # Import all command handlers
-from Black.Modules import start, reset
+from Black.Modules import start, reset, char
 
 print("🚀 Starting the bot...")
 
