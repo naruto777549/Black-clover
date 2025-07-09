@@ -8,7 +8,7 @@ users = db["users"]
 {
   "_id": 12345678,
   "character": "Asta",
-  "data": { ... },  // first selected character
+  "data": { ... },  // Asta's full character data from character.py
   "collection": [
     {
       "Name": "Asta",
@@ -19,6 +19,11 @@ users = db["users"]
       "Name": "Magna",
       "Attribute": "Fire",
       "Rarity": "Rare"
+    },
+    {
+      "Name": "Luck",
+      "Attribute": "Lightning",
+      "Rarity": "Epic"
     }
   ]
 }
