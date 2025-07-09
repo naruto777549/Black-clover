@@ -4,4 +4,4 @@ from config import MONGO_URL
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["BlackGameBot"]
 users = db["users"]
-user["collection"]
+users["collection"]
