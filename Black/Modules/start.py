@@ -57,11 +57,14 @@ async def select_character(_, query: CallbackQuery):
 
     character = all_characters[char_key]
     await users.insert_one({
-        "_id": user_id,
-        "character": character["Name"],
-        "data": character,
-        "mana": 10000,  # 🧠 Add this line
-        "collection": [
+    "_id": user_id,
+    "character": character["Name"],
+    "data": character,
+    "mana": 10000,
+    "magic": 0,
+    "tournament_permit": 0,
+    "travel_cards": 0,
+    "collection": [
             {
                 "Name": character["Name"],
                 "Attribute": character["Attribute"],
