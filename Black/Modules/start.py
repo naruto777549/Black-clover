@@ -49,27 +49,27 @@ async def private_start(_, message: Message):
 async def select_character(_, query: CallbackQuery):
     user_id = query.from_user.id
     char_key = query.data.split("_")[1]
-    
+
     user = await users.find_one({"_id": user_id})
     if user:
         await query.answer("You’ve already started!", show_alert=True)
         return
-    
+
     character = all_characters[char_key]
     await users.insert_one({
-    "_id": user_id,
-    "character": character["Name"],
-    "data": character,
-    "collection": [  # <- this part
-        {
-            "Name": character["Name"],
-            "Attribute": character["Attribute"],
-            "Rarity": character["Rarity"]
-        }
-    ]
-})
+        "_id": user_id,
+        "character": character["Name"],
+        "data": character,
+        "mana": 10000,  # 🧠 Add this line
+        "collection": [
+            {
+                "Name": character["Name"],
+                "Attribute": character["Attribute"],
+                "Rarity": character["Rarity"]
+            }
+        ]
+    })
 
-    # Build character info
     desc = f"""
 🎉 <b>Congratulations {query.from_user.first_name}!</b>
 
@@ -86,6 +86,7 @@ You’ve chosen: <b>{character['Name']}</b>
 🌟 Rarity: {character['Rarity']}
 
 🧠 Trait: {character['Trait']}
+🧿 Mana Points: <b>10,000</b>
 📝 Description: {character['Description']}
 """
     await query.message.delete()
