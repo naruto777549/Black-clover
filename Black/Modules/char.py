@@ -1,7 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
 from Black import bot
-from Black.db import user
 from Black.db import users
 
 @bot.on_message(filters.command("mychar"))
