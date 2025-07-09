@@ -5,11 +5,13 @@ client = AsyncIOMotorClient(MONGO_URL)
 db = client["BlackGameBot"]
 users = db["users"]
 
-{
-  "_id": 12345678,
-  "character": "Asta",
-  "data": { ... },  // Asta's full character data from character.py
-  "collection": [
+# Example document structure:
+# {
+#   "_id": 12345678,
+#   "character": "Asta",
+#   "data": { ... },  # Asta's full character data from character.py
+#   "collection": [...]
+# }
     {
       "Name": "Asta",
       "Attribute": "Anti-Magic",
