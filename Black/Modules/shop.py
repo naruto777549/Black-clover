@@ -63,4 +63,10 @@ async def handle_buy(_, query: CallbackQuery):
     )
 
     caption = f"🎉 Congratulations! You've successfully purchased {char['Name']}!\n\n🧝‍♂️ Attribute: {char['Attribute']}\n🧪 Rarity: {char['Rarity']}"
-    await query.message.edit_caption(caption=caption, photo=char["Pic"])
+    
+    await query.message.delete()
+    await bot.send_photo(
+        chat_id=query.message.chat.id,
+        photo=char["Pic"],
+        caption=caption
+    )
