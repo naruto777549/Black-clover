@@ -87,7 +87,7 @@ async def advanced_stats(_, query):
         [InlineKeyboardButton("🔙 Back", callback_data="back_profile")]
     ])
 
-    await query.message.edit_caption(stats, reply_markup=back_btn, parse_mode="html")
+    await query.message.edit_caption(stats, reply_markup=back_btn, parse_mode=None)
 
 
 # 🔙 Back to Profile
