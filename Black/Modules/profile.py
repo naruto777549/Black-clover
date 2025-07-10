@@ -93,6 +93,7 @@ async def advanced_stats(_, query):
 # Back to Profile
 @bot.on_callback_query(filters.regex("back_profile"))
 async def back_to_profile(_, query):
+    await query.message.delete()
     fake_msg = query.message
     fake_msg.from_user = query.from_user
-    await profile(bot, fake_msg)  
+    await profile(bot, fake_msg) 
