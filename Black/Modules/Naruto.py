@@ -8,7 +8,7 @@ from pyrogram.enums import ChatAction
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Black import bot as app  # Your app instance
+from Black import bot  # Your app instance
 
 # Command prefix and bot owner
 prefix = [".", "!", "?", "*", "$", "#", "/"]
