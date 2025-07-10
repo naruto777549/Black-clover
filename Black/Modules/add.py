@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from pyrogram.enums import ParseMode
 from Black import bot
 from Black.db import users, Banned
-from Black.config import DEVS  # Ensure you have DEVS defined in config
+from config import DEVS  # Ensure you have DEVS defined in config
 
 @bot.on_message(filters.command("add") & filters.user(DEVS), group=32)
 async def add_mana_magic(_, msg: Message):
