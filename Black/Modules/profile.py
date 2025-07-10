@@ -26,16 +26,14 @@ async def profile(_, message: Message):
 
     # Add circular PFP
     if pfp_path:
-        pfp_img = Image.open(pfp_path).resize((270, 270)).convert("RGBA")  # Bigger size
-        mask = Image.new("L", (270, 270), 0)
+        pfp = Image.open(pfp_path).resize((380, 380)).convert("RGBA")
+        mask = Image.new("L", (380, 380), 0)
         draw = ImageDraw.Draw(mask)
-        draw.ellipse((0, 0, 270, 270), fill=255)
-        pfp_img.putalpha(mask)
+        draw.ellipse((0, 0, 380, 380), fill=255)
+        pfp.putalpha(mask)
 
-        # ✅ Center-left placement (tweak X, Y as needed)
-        pfp_x = 80
-        pfp_y = 220
-        bg_image.paste(pfp_img, (pfp_x, pfp_y), pfp_img)
+        # Positioning circular profile
+        bg_image.paste(pfp, (43, 233), pfp)
 
     # Save final image
     final_path = f"/tmp/{user_id}_profile.png"
@@ -65,7 +63,8 @@ async def profile(_, message: Message):
         reply_markup=buttons
     )
 
-# More Stats
+
+# 📊 More Stats Handler
 @bot.on_callback_query(filters.regex("more_stats"))
 async def advanced_stats(_, query):
     user_id = query.from_user.id
@@ -88,12 +87,13 @@ async def advanced_stats(_, query):
         [InlineKeyboardButton("🔙 Back", callback_data="back_profile")]
     ])
 
-    await query.message.edit_caption(stats, reply_markup=back_btn, parse_mode=None)
+    await query.message.edit_caption(stats, reply_markup=back_btn, parse_mode="html")
 
-# Back to Profile
+
+# 🔙 Back to Profile
 @bot.on_callback_query(filters.regex("back_profile"))
 async def back_to_profile(_, query):
-    await query.message.delete()
+    # Regenerate without deleting the message
     fake_msg = query.message
     fake_msg.from_user = query.from_user
-    await profile(bot, fake_msg) 
+    await profile(bot, fake_msg)
