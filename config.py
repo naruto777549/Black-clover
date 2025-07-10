@@ -6,3 +6,4 @@ BOT_TOKEN = os.getenv("BOT_TOKEN", "8106403386:AAGSwhBvzjj1NFFfF13dvtJIEoBRnCw8o
 MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://sufyan532011:5042@auctionbot.5ms20.mongodb.net/?retryWrites=true&w=majority&appName=AuctionBot")
 ADMINS = list(map(int, os.getenv("ADMINS", "7576729648").split()))
 BOT_USER = os.getenv("BOT_USER", "Shrutimusirobot")
+DEVS = os.getenv("DEVS", "7576729648")
