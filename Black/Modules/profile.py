@@ -84,11 +84,11 @@ async def advanced_stats(_, query):
         [InlineKeyboardButton("🔙 Back", callback_data="back_profile")]
     ])
 
-    await query.message.edit_caption(stats, reply_markup=back_btn, parse_mode="html")
+    await query.message.edit_caption(stats, reply_markup=back_btn, parse_mode=None)
 
 # Back to Profile
 @bot.on_callback_query(filters.regex("back_profile"))
 async def back_to_profile(_, query):
     fake_msg = query.message
     fake_msg.from_user = query.from_user
-    await profile(bot, fake_msg)
+    await profile(bot, fake_msg)  
