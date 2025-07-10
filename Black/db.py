@@ -5,7 +5,7 @@ client = AsyncIOMotorClient(MONGO_URL)
 db = client["BlackGameBot"]
 
 Users = db["users"] 
-Users = Users 
+users = Users 
 Banned = []          
 
 guilds = db["GUILDS"]
