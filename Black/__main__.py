@@ -1,7 +1,7 @@
 #__main__.py
 from pyrogram import Client, filters
-from BEY import bot
-from BEY.Modules import *
+from Black import bot
+from Black.Modules import *
 
 if __name__=="__main__":
     bot.run()
