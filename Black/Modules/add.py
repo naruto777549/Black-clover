@@ -1,6 +1,5 @@
 from pyrogram import filters
 from pyrogram.types import Message
-from pyrogram.enums import ParseMode
 from Black import bot
 from Black.db import users, Banned
 from config import DEVS  # Add your developer IDs here
@@ -17,7 +16,7 @@ async def add_mana_and_magic(_, message: Message):
             mana = int(args[1])
             magic = int(args[2])
         except:
-            return await message.reply("⚠️ Invalid values. Use: `/add <mana> <magic>` on a replied user.", parse_mode="Markdown")
+            return await message.reply("⚠️ Invalid values. Use: /add <mana> <magic> on a replied user.")
 
     # 📌 Case 2: Used directly -> /add <user_id> <mana> <magic>
     elif len(args) == 4:
@@ -26,9 +25,9 @@ async def add_mana_and_magic(_, message: Message):
             mana = int(args[2])
             magic = int(args[3])
         except:
-            return await message.reply("⚠️ Invalid format. Use: `/add <user_id> <mana> <magic>`", parse_mode="Markdown")
+            return await message.reply("⚠️ Invalid format. Use: /add <user_id> <mana> <magic>")
     else:
-        return await message.reply("⚠️ Usage:\n• `/add <user_id> <mana> <magic>`\n• Or reply with `/add <mana> <magic>`", parse_mode="Markdown")
+        return await message.reply("⚠️ Usage:\n• /add <user_id> <mana> <magic>\n• Or reply with /add <mana> <magic>")
 
     # 🚫 Check banned users
     if target_id in Banned:
@@ -42,6 +41,5 @@ async def add_mana_and_magic(_, message: Message):
     )
 
     await message.reply(
-        f"✅ Mana & Magic Points added:\n\n👤 User ID: `{target_id}`\n🔹 Mana: `{mana}`\n🔸 Magic: `{magic}`",
-        parse_mode="Markdown"
+        f"✅ Mana & Magic Points added:\n\n👤 User ID: {target_id}\n🔹 Mana: {mana}\n🔸 Magic: {magic}"
     )
