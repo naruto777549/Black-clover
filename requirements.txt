@@ -1,5 +1,9 @@
-kurigram 
-tgcrypto
+kurigram
 motor
-pymongo 
-pillow 
+python-dotenv
+tgcrypto 
+AuthNex
+psutil
+speedtest-cli
+pillow
+pytz
