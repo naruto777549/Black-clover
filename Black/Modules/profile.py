@@ -33,7 +33,7 @@ async def profile(_, message: Message):
         pfp.putalpha(mask)
 
         # Positioning circular profile
-        bg_image.paste(pfp, (43, 233), pfp)
+        bg_image.paste(pfp, (40, 200), pfp)
 
     # Save final image
     final_path = f"/tmp/{user_id}_profile.png"
