@@ -34,7 +34,7 @@ async def profile(_, message: Message):
 
         # ✅ Center-left placement (tweak X, Y as needed)
         pfp_x = 80
-        pfp_y = 180
+        pfp_y = 220
         bg_image.paste(pfp_img, (pfp_x, pfp_y), pfp_img)
 
     # Save final image
