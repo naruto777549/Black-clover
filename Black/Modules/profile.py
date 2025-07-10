@@ -33,8 +33,8 @@ async def profile(_, message: Message):
         pfp_img.putalpha(mask)
 
         # ✅ Center-left placement (tweak X, Y as needed)
-        pfp_x = 40
-        pfp_y = 60
+        pfp_x = 80
+        pfp_y = 120
         bg_image.paste(pfp_img, (pfp_x, pfp_y), pfp_img)
 
     # Save final image
