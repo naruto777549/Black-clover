@@ -26,12 +26,16 @@ async def profile(_, message: Message):
 
     # Add circular PFP
     if pfp_path:
-        pfp_img = Image.open(pfp_path).resize((200, 200)).convert("RGBA")
-        mask = Image.new("L", (200, 200), 0)
-        draw = ImageDraw.Draw(mask)
-        draw.ellipse((0, 0, 200, 200), fill=255)
-        pfp_img.putalpha(mask)
-        bg_image.paste(pfp_img, (40, 40), pfp_img)
+        pfp_img = Image.open(pfp_path).resize((270, 270)).convert("RGBA")  # Bigger size
+mask = Image.new("L", (270, 270), 0)
+draw = ImageDraw.Draw(mask)
+draw.ellipse((0, 0, 270, 270), fill=255)
+pfp_img.putalpha(mask)
+
+# ✅ Center-left placement (tweak X, Y as needed)
+pfp_x = 30
+pfp_y = 30
+bg_image.paste(pfp_img, (pfp_x, pfp_y), pfp_img)
 
     # Save final image
     final_path = f"/tmp/{user_id}_profile.png"
