@@ -3,9 +3,10 @@ from config import MONGO_URL
 
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["BlackGameBot"]
-users = db["users"]
-users["collection"]
-Banned = []
+
+Users = db["users"]  
+Banned = []          
+
 guilds = db["GUILDS"]
 Pre_Users = db["PRE REGISTERED USERS"]
 battle_col = db["BATTLES"]
