@@ -79,6 +79,6 @@ async def purchase_character(_, query: CallbackQuery):
 
     await query.message.edit_caption(
         caption=f"✅ You recruited **{item['data']['name']}** for **{item['price']} mana**!\nCheck your `/inventory` to view.",
-        parse_mode="Markdown"
+        parse_mode=None
     )
     await query.answer("🎉 Character recruited!")
