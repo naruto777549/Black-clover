@@ -7,3 +7,4 @@ MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://sufyan532011:5042@auctionbot.5
 ADMINS = list(map(int, os.getenv("ADMINS", "7576729648").split()))
 BOT_USER = os.getenv("BOT_USER", "Shrutimusirobot")
 DEVS = list(map(int, os.getenv("DEVS", "7576729648").split()))
+LOGS_CHANNEL = int(os.getenv("LOGS_CHANNEL", "-1002623336438"))
