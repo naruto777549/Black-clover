@@ -2,3 +2,4 @@ kurigram
 tgcrypto
 motor
 pymongo 
+pillow 
