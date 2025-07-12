@@ -62,6 +62,7 @@ async def select_character(_, query: CallbackQuery):
     "data": character,
     "mana": 10000,
     "magic": 0,
+    "xp": 0,
     "tournament_permit": 0,
     "travel_cards": 0,
     "collection": [
