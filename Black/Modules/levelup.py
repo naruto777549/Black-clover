@@ -95,7 +95,7 @@ async def levelup_menu(_, message: Message):
         return await message.reply("😕 You don't have any characters to level up.")
 
     buttons = [
-        [InlineKeyboardButton(f"{char['name']} (Lvl {char['level']})", callback_data=f"lvl_char_{char['id']}")]
+        [InlineKeyboardButton(f"{char['name']} (Lvl {char.get('level', 1)})", callback_data=f"lvl_char_{char['id']}")]
         for char in characters
     ]
     await message.reply(
