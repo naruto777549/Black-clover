@@ -60,3 +60,9 @@ Luck = {
     'Pic': 'https://files.catbox.moe/x6cbgl.jpg',
     'Description': "Luck is a cheerful battle junkie who uses lightning-fast attacks to overwhelm enemies. His power increases as the fight drags on."
 }
+
+characters = {
+    "Asta": Asta,
+    "Magna": Magna,
+    "Luck": Luck
+}
