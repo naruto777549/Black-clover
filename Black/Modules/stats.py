@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.enums import ParseMode
 from Black import bot
-from Black.data.characters import characters  # you must store Asta, etc. here
+from Black.character.character import characters  # you must store Asta, etc. here
 
 @bot.on_message(filters.command("stats"))
 async def show_character(_, message: Message):
